@@ -1,9 +1,9 @@
 import fight from "./fight/fight";
-import Fight from "./fight/fighter";
-import ImprovedFighter from "./fight/improvedFighter";
+import {Fighter} from "./fight/fighter";
+import {ImprovedFighter} from "./fight/improvedFighter";
 
-let fighter = new Fight();
-let improvedFighter = new ImprovedFighter();
+let fighter = new Fighter(`Fighter`, 200, 2);
+let improvedFighter = new ImprovedFighter(`ImprovedFighter`, 400, 4);
 
 let point = [25, 13, 45, 50, 90, 20, 30, 10];
 

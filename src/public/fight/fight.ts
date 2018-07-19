@@ -1,8 +1,10 @@
+import {Fighter} from "./fighter";
+import {ImprovedFighter} from "./improvedFighter"
 
-export default async function fight(fighter, improvedFighter, ...points) {
+export default async function fight(fighter: Fighter, improvedFighter: ImprovedFighter, ...points:number[]) {
     try {
-      let countOfHits = points.length;
-      let resultOfFight = false;
+      let countOfHits:number = points.length;
+      let resultOfFight:boolean = false;
   
       for (let numberOfHit = 0; numberOfHit < countOfHits; numberOfHit++) {
         if (numberOfHit % 2 == 0) {

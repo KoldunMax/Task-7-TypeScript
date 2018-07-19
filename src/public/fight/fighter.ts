@@ -3,15 +3,15 @@ export interface IFighter {
     health: number;
     setDemage: (damage: number) => void;
     hit: (enemy: Fighter, point: number) => void;
-    knockout<T>(): T;
+    knockout: () => any;
 }
 
-export class Fighter {
-    protected name: string
-    protected health: number
-    protected power: number
+export class Fighter implements IFighter{
+     name: string
+     health: number
+     power: number
 
-    constructor(name : string, health : number, power: number) {
+    constructor(name: string, health: number, power: number) {
         this.name = name;
         this.health = health;
         this.power = power;
@@ -27,8 +27,8 @@ export class Fighter {
       enemy.setDemage(demage);
     }
   
-    knockout() {
-      return new Promise<string>(resolve => {
+    knockout():any {
+      return new Promise(resolve => {
         setTimeout(() => {
           console.log(`time is over`);
           resolve(`${this.name} is lost`);

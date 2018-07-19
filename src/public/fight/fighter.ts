@@ -1,7 +1,7 @@
 export interface IFighter {
     setDemage: (damage: number) => void;
     hit: (enemy: Fighter, point: number) => void;
-    knockout: () => any;
+    knockout: () => Promise<string>;
 }
 
 export class Fighter implements IFighter{
@@ -37,7 +37,7 @@ export class Fighter implements IFighter{
       enemy.setDemage(demage);
     }
   
-    knockout():any {
+    knockout():Promise<string> {
       return new Promise(resolve => {
         setTimeout(() => {
           console.log(`time is over`);

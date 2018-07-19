@@ -4,7 +4,7 @@ import ImprovedFighter from "./improvedFighter"
 export default async function fight(fighter: Fighter, improvedFighter: ImprovedFighter, ...points:number[]) {
     try {
       let countOfHits:number = points.length;
-      let resultOfFight:boolean = false;
+      let resultOfFight:string = "";
   
       for (let numberOfHit = 0; numberOfHit < countOfHits; numberOfHit++) {
         if (numberOfHit % 2 == 0) {
@@ -22,7 +22,7 @@ export default async function fight(fighter: Fighter, improvedFighter: ImprovedF
             break;
           }
         }
-        if (!resultOfFight && countOfHits - 1 == numberOfHit) {
+        if (!!(<any>resultOfFight) && countOfHits - 1 == numberOfHit) {
           console.log(
             `Draw, ${fighter.getName} has ${fighter.getHealth} and ${
               improvedFighter.getName

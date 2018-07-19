@@ -1,0 +1,30 @@
+.field{
+    margin-bottom: 15px;
+}
+
+#user-info{
+    height: 25px;
+}
+
+hr {
+    margin-top: 0;
+}
+
+img{
+    width: 50px;
+}
+
+.race{
+    margin-top: 60px;
+}
+
+.user {
+    position: relative;
+    margin-right: 50px;
+    height: 70px;
+}
+
+#motorcycle {
+    position: absolute;
+    bottom: 0px;
+}

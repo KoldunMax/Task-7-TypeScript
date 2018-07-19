@@ -1,5 +1,5 @@
 import {Fighter} from "./fighter";
-import {ImprovedFighter} from "./improvedFighter"
+import ImprovedFighter from "./improvedFighter"
 
 export default async function fight(fighter: Fighter, improvedFighter: ImprovedFighter, ...points:number[]) {
     try {
@@ -24,9 +24,9 @@ export default async function fight(fighter: Fighter, improvedFighter: ImprovedF
         }
         if (!resultOfFight && countOfHits - 1 == numberOfHit) {
           console.log(
-            `Draw, ${fighter.name} has ${fighter.health} and ${
-              improvedFighter.name
-            } has ${improvedFighter.health}`
+            `Draw, ${fighter.getName} has ${fighter.getHealth} and ${
+              improvedFighter.getName
+            } has ${improvedFighter.getHealth}`
           );
           break;
         }

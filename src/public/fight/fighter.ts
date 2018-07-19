@@ -1,20 +1,30 @@
 export interface IFighter {
-    name: string;
-    health: number;
     setDemage: (damage: number) => void;
     hit: (enemy: Fighter, point: number) => void;
     knockout: () => any;
 }
 
 export class Fighter implements IFighter{
-     name: string
-     health: number
-     power: number
+    protected name: string
+    protected health: number
+    protected power: number
 
     constructor(name: string, health: number, power: number) {
         this.name = name;
         this.health = health;
         this.power = power;
+    }
+
+    get getName():string {
+        return this.name;
+    }
+
+    get getHealth():number {
+        return this.health;
+    }
+
+    get getPower():number {
+        return this.power;
     }
   
     setDemage(damage: number): void {

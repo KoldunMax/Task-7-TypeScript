@@ -36,9 +36,9 @@ export default async function fight(fighter: Fighter, improvedFighter: ImprovedF
     }
   }
   
-  function isKnockout(fighter) {
-    if (fighter.health <= 0) {
-      console.log(`${fighter.name} is in knockout`);
+  function isKnockout(fighter: Fighter | ImprovedFighter):boolean {
+    if (fighter.getHealth <= 0) {
+      console.log(`${fighter.getName} is in knockout`);
       return true;
     }
     return false;

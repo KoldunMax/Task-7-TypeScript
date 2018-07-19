@@ -1,9 +1,10 @@
-import { Race } from './race/race';
+import fight from "./fight/fight";
+import Fight from "./fight/fighter";
+import ImprovedFighter from "./fight/improvedFighter";
 
-export default class Main {
-    constructor() {
-        const app = new Race();
-    }
-}
+let fighter = new Fight();
+let improvedFighter = new ImprovedFighter();
 
-const start = new Main();
+let point = [25, 13, 45, 50, 90, 20, 30, 10];
+
+fight(fighter, improvedFighter, ...point);

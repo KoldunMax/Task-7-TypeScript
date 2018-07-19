@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "sourceMap": true
   },
+  "extends": "./configs/base",
   "exclude": [
     "node_modules",
     "dist"
